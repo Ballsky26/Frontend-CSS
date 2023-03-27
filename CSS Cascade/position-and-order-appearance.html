@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position and Order Appearance</title>
+    <link
+      rel="stylesheet"
+      href="https://codepen.io/web-dot-dev/pen/abpoXGZ.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="flow">
+        <h1>Cascade position order</h1>
+        <figure class="callout">
+          <p>
+            The <code>&lt;style&gt;</code> element is declared in the
+            <code>&lt;head&gt;</code>, while the
+            <code>&lt;link&gt;</code> element is declared in the
+            <code>&lt;body&gt;</code>. This means the
+            <code>&lt;link&gt;</code> gets more specificity than the
+            <code>&lt;style&gt;</code> element and the blue hex code
+            (<code>#3740ff</code>) is applied to the button’s background.
+          </p>
+        </figure>
+        <button class="button">
+          My background has been set by the second link element.
+        </button>
+      </article>
+    </div>
+    <article class="wrapper">
+      <p class="my-element">
+        If the browser supports the clamp property, this text will be sized
+        fluidly as you resize the page. If not, the browser will ignore the
+        clamp value because it doesn’t understand it.
+      </p>
+    </article>
+  </body>
+</html>

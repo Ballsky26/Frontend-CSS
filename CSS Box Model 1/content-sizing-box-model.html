@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Sizing Box Model</title>
+    <style>
+      .awesome {
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1;
+        border: 5px solid;
+        padding: 2rem;
+        width: 320px;
+      }
+      .awesome[data-sizing="intrinsic"] {
+        width: min-content;
+      }
+      .awesome {
+        --flow-space: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="flow">
+        <h1>Extrinsic Sizing vs Intrinsic Sizing</h1>
+        <figure class="callout">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos vero
+            quae libero qui beatae fugiat, aliquam veritatis veniam laudantium
+            corporis sint repellat possimus tempora? Obcaecati quaerat numquam
+            at magni maiores!
+          </p>
+        </figure>
+        <label class="toogle" for="intrinsic-switch">
+          <span class="toogle_label">Nyalakan Intrinsic Sizing</span>
+          <input
+            type="checkbox"
+            role="switch"
+            class="toogle_elemnt"
+            id="intrinsic-switch"
+          />
+          <div class="toogle_decor" aria-hidden="true">
+            <div class="toggle_thumb"></div>
+          </div>
+        </label>
+        <p class="awesome" data-element="awesome">CSS is Awesome</p>
+      </article>
+    </div>
+    <script>
+      const awesome = document.querySelector('[data-element="awesome"]');
+      const intrinsicSwitch = document.querySelector("#intrinsic-switch");
+      console.log("intrinsicSwitch");
+      // Set sizing attribute based on switch
+      intrinsicSwitch.addEventListener("change", () => {
+        awesome.setAttribute(
+          "data-sizing",
+          intrinsicSwitch.checked ? "intrinsic" : "extrinsic"
+        );
+      });
+    </script>
+  </body>
+</html>

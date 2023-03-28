@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Inheritance Keyword</title>
+    <style>
+      body {
+        color: black;
+      }
+      a {
+        color: inherit;
+      }
+      .my-component {
+        font-weight: 500;
+      }
+      .my-component strong {
+        font-weight: inherit;
+      }
+      /* jika menaruh inherit maka akan mengikuti parent sebelumnya */
+    </style>
+  </head>
+  <body>
+    <div class="my-component">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique,
+      delectus! <br />
+      <strong>this strong</strong>
+    </div>
+  </body>
+</html>

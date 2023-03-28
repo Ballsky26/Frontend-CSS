@@ -1,0 +1,89 @@
+a:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+.button:active {
+  transform: scale(0.99);
+  box-shadow: none;
+}
+.button:focus {
+  outline: 2px dashed blue;
+  outline-offset: 2px;
+  background-color: black;
+}
+/* This highlights the <h2> for the recipe and every element that follows it */
+#recipe:target,
+#recipe:target ~ * {
+  background: lightgoldenrodyellow;
+}
+
+h2 {
+  display: inline-block;
+}
+
+h2,
+p {
+  padding: 0.25em;
+}
+
+[id] {
+  scroll-margin-top: 2em;
+}
+button:disabled {
+  background: grey;
+  border-color: grey;
+  cursor: not-allowed;
+}
+
+button:enabled {
+  border: 5px solid gold;
+}
+
+button:disabled:hover {
+  box-shadow: none;
+}
+
+/* Presentational styles */
+div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+:checked {
+  box-shadow: 0px 0px 5px 2px green;
+}
+
+label {
+  font-weight: bold;
+}
+input.email {
+  border: 1px solid black;
+}
+input.email:invalid {
+  border-color: red;
+}
+
+input.email:valid {
+  border-color: green;
+}
+
+input.email {
+  min-width: 320px;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  font: inherit;
+  border-radius: 0.25rem;
+}
+
+.info {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-block-start: 0.5em;
+}

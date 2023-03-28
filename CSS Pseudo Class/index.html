@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo Class</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>This is a link: <a href="#">hover over me</a></p>
+
+    <div class="wrapper">
+      <button class="button">Click and hold to see the active state</button>
+    </div>
+    <br />
+    <div>
+      <button disabled>I am a button with a disabled state</button>
+      <button>I am an enabled button</button>
+    </div>
+    <br />
+    <div class="wrapper">
+      <label>
+        <input type="checkbox" />
+        Check me
+      </label>
+      <label>
+        <input type="checkbox" />
+        Check me too
+      </label>
+    </div>
+    <br />
+    <form>
+      <label for="email">Email address</label>
+      <input
+        class="email"
+        type="email"
+        id="email"
+        required
+        placeholder="A valid email, like name@domain.com"
+        aria-describedby="emailinfo"
+      />
+      <p class="info" id="emailinfo">
+        Add a valid email address to see the state change
+      </p>
+    </form>
+
+    <br />
+    <main class="wrapper">
+      <article class="flow">
+        <h1>My pizza dough recipe</h1>
+        <p>
+          <a href="#recipe" class="button">Skip to the recipe</a>
+        </p>
+        <p>
+          Here are several paragraphs of back-story: Fusce dapibus, tellus ac
+          cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+          justo sit amet risus. Curabitur blandit tempus porttitor. Vestibulum
+          id ligula porta felis euismod semper. Nullam quis risus eget urna
+          mollis ornare vel eu leo. Cras mattis consectetur purus sit amet
+          fermentum.
+        </p>
+        <p>
+          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec
+          sed odio dui. Donec id elit non mi porta gravida at eget metus. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id
+          nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac
+          facilisis in, egestas eget quam. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam.
+        </p>
+        <p>
+          Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non
+          mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis
+          dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+          gravida at eget metus. Morbi leo risus, porta ac consectetur ac,
+          vestibulum at eros.
+        </p>
+        <h2 id="recipe">Here is the actual recipe</h2>
+        <p>
+          Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec
+          sed odio dui. Donec id elit non mi porta gravida at eget metus. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id
+          nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac
+          facilisis in, egestas eget quam. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam.
+        </p>
+        <p>
+          Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non
+          mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis
+          dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+          gravida at eget metus. Morbi leo risus, porta ac consectetur ac,
+          vestibulum at eros.
+        </p>
+      </article>
+    </main>
+    <br />
+  </body>
+</html>

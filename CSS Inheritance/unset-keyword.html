@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unset Keyword</title>
+    <style>
+      p {
+        margin-top: 2em;
+        color: goldenrod;
+      }
+      div {
+        color: red;
+      }
+      aside p {
+        margin: unset;
+        color: unset;
+      }
+      div p {
+        margin: unset;
+        color: inherit;
+      }
+      .class1 {
+        color: blue;
+      }
+      .class2 {
+        color: salmon;
+      }
+      section p {
+        color: inherit;
+      }
+      /* jika kita menambahkan unset nantinya akan di reset */
+      /* jika kita menambahkan inherite maka akan menyamakan parent sebelumnya */
+    </style>
+  </head>
+  <body>
+    <p>this is outside aside</p>
+    <aside>this is strong</aside>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ad
+        incidunt. Totam.
+      </p>
+    </div>
+    <section class="class1">
+      <p>this is p inside class 1</p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+      voluptas porro provident aut dicta! Unde maiores blanditiis ea iure
+      similique! Distinctio, maiores doloribus architecto possimus asperiores ex
+      voluptas quasi expedita?
+    </section>
+    <div class="class2">Lorem, ipsum.</div>
+  </body>
+</html>

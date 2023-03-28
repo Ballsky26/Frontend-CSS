@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .callout {
+        padding: 1rem 1rem 1rem 3rem;
+        background: #e8f0fe;
+        border: 1px solid #3740ff;
+        color: #272eb5;
+        position: relative;
+        max-width: 40rem;
+      }
+
+      .callout::before {
+        content: "";
+
+        /* SVG via a data URI! */
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23272eb5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M14 9.5c0-.825.675-1.5 1.5-1.5h1c.825 0 1.5.675 1.5 1.5v1c0 .825-.675 1.5-1.5 1.5h-1c-.825 0-1.5-.675-1.5-1.5v-1zM20 24h-8v-2h2v-6h-2v-2h6v8h2z"/><path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 29C8.82 29 3 23.18 3 16S8.82 3 16 3s13 5.82 13 13-5.82 13-13 13z"/></svg>');
+        background-size: cover;
+        width: 1.25rem;
+        height: 1.25rem;
+        display: block;
+        position: absolute;
+        left: 1rem;
+      }
+
+      .callout p + p {
+        margin-top: 1em;
+      }
+
+      .callout a {
+        color: #272eb5;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.2em;
+      }
+
+      p.fl::first-letter {
+        color: goldenrod;
+        font-weight: bold;
+      }
+      p.fln::first-line {
+        color: goldenrod;
+        font-weight: bold;
+      }
+      p.fln {
+        max-width: 400px;
+        display: inline-block;
+      }
+      ::marker {
+        color: hotpink;
+      }
+
+      ul ::marker {
+        font-size: 1.5em;
+      }
+
+      ol ::marker {
+        font-size: 1.1em;
+      }
+
+      summary::marker {
+        content: "\002B"" "; /* Plus symbol with space */
+      }
+
+      details[open] summary::marker {
+        content: "\2212"" "; /* Minus symbol with space */
+      }
+
+      /* Presentational styles */
+      li + li {
+        margin-top: 0.25em;
+      }
+
+      ol {
+        padding: 0 0 0 1.1em;
+      }
+      ::selection {
+        background: blue;
+        color: white;
+      }
+      input::placeholder {
+        color: darkcyan;
+      }
+
+      /* Presentational styles */
+
+      input {
+        padding: 0.5em 1em;
+        border: 1px solid var(--color-stroke);
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="callout">
+      <p>
+        A callout with a nice, decorative icon. The icon is added with a
+        <code>::before</code> pseudo-element, which sets inline SVG with
+        <a href="https://css-tricks.com/lodge/svg/09-svg-data-uris/"
+          >a data URI</a
+        >, via the <code>background</code> property.
+      </p>
+    </figure>
+    <br />
+    <p class="fl">
+      The first letter of this paragraph is <code>goldenrod</code>, which is a
+      <em>great</em> color.
+    </p>
+    <br />
+    <p class="fln">
+      The first line of this paragraph is <code>goldenrod</code>, which is a
+      <em>great</em> color. Here is some lipsum to fill it out Praesent commodo
+      cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur
+      est at lobortis.
+    </p>
+
+    <main>
+      <div class="wrapper">
+        <article class="flow">
+          <h1>The <code>::marker</code> pseudo-element</h1>
+          <figure class="callout">
+            <p>
+              Using <code>::marker</code> pseudo-element, you can style the
+              markers of the <code>&lt;ul&gt;</code>,
+              <code>&lt;ol&gt;</code> and <code>&lt;summary&gt;</code> elements.
+            </p>
+          </figure>
+          <ul>
+            <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+            <li>
+              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </li>
+            <li>Curabitur blandit tempus porttitor.</li>
+          </ul>
+          <ol>
+            <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+            <li>
+              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </li>
+            <li>Curabitur blandit tempus porttitor.</li>
+          </ol>
+          <details>
+            <summary>Open for some more content</summary>
+            <p>
+              Maecenas sed diam eget risus varius blandit sit amet non magna.
+              Sed posuere consectetur est at lobortis. Aenean eu leo quam.
+              Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Maecenas sed diam eget risus varius blandit sit amet non magna.
+              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+              Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque
+              nisl consectetur et. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Aenean eu leo quam.
+              Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras
+              justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id
+              dolor id nibh ultricies vehicula ut id elit.
+            </p>
+          </details>
+        </article>
+      </div>
+    </main>
+    <p>
+      Select the text in this paragraph to see the effect. Vestibulum id ligula
+      porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.
+      Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque
+      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+    <br />
+    <label for="email">Email address</label>
+    <input type="email" placeholder="E.G name@example.com" id="email" />
+  </body>
+</html>

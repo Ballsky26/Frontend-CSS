@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive States Focus Visible</title>
+    <style>
+      /* .button:focus {
+        outline: 2px dashed blue;
+        outline-offset: 2px;
+        background-color: hotpink;
+      } */
+      .button:focus {
+        outline: none;
+      }
+      .button:focus-visible {
+        outline: 2px dashed blue;
+        outline-offset: 2px;
+      }
+      .button {
+        background-color: blue;
+        border: none;
+        color: wheat;
+        padding: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="button">Click me</button>
+    </div>
+  </body>
+</html>

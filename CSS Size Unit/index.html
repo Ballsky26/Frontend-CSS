@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Size Unit</title>
+    <style>
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        max-width: 15ch;
+      }
+
+      p {
+        font-size: 1.25rem;
+        max-width: 70ch;
+      }
+
+      /* Presentational styles */
+      article {
+        width: 100%;
+      }
+
+      article > * + * {
+        margin-top: 1.25em;
+      }
+      p.myp {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+      div {
+        width: 300px;
+        height: 100px;
+      }
+
+      div p {
+        width: 50%; /* calculated: 150px */
+      }
+
+      /* Presentation styles */
+
+      * {
+        box-sizing: content-box;
+      }
+      div.border,
+      p.border {
+        border: 1px solid black;
+        padding: 0.25rem;
+      }
+      div.vp {
+        width: 10vw;
+      }
+
+      p.vp {
+        max-width: 60ch;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Using a <code>ch</code> unit to size text</h1>
+      <p>
+        The <code>ch</code> unit allows you to control the size of text based on
+        its actual contextual size—the width of a <code>0</code> character. This
+        means that if you set the max width of some text as <code>70ch</code>:
+        regardless of the size of that text, you can always be sure that it will
+        be at most, 70 characters wide.
+      </p>
+      <p>
+        Go ahead and change the font sizes and max widths of these elements in
+        the CSS editor to see it working.
+      </p>
+    </article>
+
+    <p class="myp">
+      The line height is a ratio of 24px, rather than a specific size. The line
+      height is currently 1.5, which calculates as 36px
+    </p>
+
+    <div class="border">
+      <p class="border">
+        This p element is 50% of the div’s width, which is 150px.
+      </p>
+    </div>
+
+    <main>
+      <div class="vp">This div is 10% of the viewport.</div>
+
+      <p class="vp">
+        This paragraph is limited to <code>60ch</code> which is the same width
+        as 60 “0” characters in the rendered font.
+      </p>
+    </main>
+  </body>
+</html>

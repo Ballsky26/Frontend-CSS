@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Z-Index</title>
+    <style>
+      .flex {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        max-width: 750px;
+      }
+      .wrapper > * {
+        width: 250px;
+        height: 200px;
+        padding: 1em;
+      }
+      .wrapper > * + * {
+        margin-top: -150px;
+        opacity: 0.75;
+        box-shadow: 0 -1px 10px rgba(0 0 0 / 60%);
+      }
+      .wrapper.relative-position > .box {
+        position: relative;
+      }
+
+      .wrapper > .z-index-3 {
+        background: aliceblue;
+        border: 2px solid lightblue;
+        z-index: 3;
+      }
+      .wrapper > .z-index-1 {
+        background: pink;
+        border: 2px solid hotpink;
+        z-index: 1;
+        margin-left: 1rem;
+      }
+      .wrapper > .z-index-2 {
+        background: wheat;
+        border: 2px solid gold;
+        z-index: 2;
+      }
+
+      .negative-z-index {
+        background: rgb(232 240 254 / 0.5);
+        border: 1px solid lightblue;
+      }
+      .negative-z-index.relative {
+        position: relative;
+        z-index: 0;
+      }
+      .negative-z-index .child {
+        position: relative;
+        z-index: -1;
+        background: pink;
+        border: 1px solid hotpink;
+        padding: 1rem;
+        width: 275px;
+      }
+      /* Decorative styles */
+      .negative-z-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 250px;
+      }
+      .child {
+        font-weight: bold;
+      }
+
+      /* stacking context */
+      .top,
+      .bottom {
+        width: 250px;
+        padding: 80px 20px;
+        position: relative;
+      }
+      .inner {
+        padding: 20px;
+      }
+      .bottom {
+        z-index: 2;
+        margin-top: -90px;
+        opacity: 0.8;
+        box-shadow: 0 -1px 10px rgba(0 0 0 / 60%);
+      }
+      .top {
+        z-index: 1;
+        background: aliceblue;
+        border: 2px solid lightblue;
+      }
+      .bottom {
+        background: pink;
+        border: 2px solid hotpink;
+      }
+      .inner {
+        background: wheat;
+        border: 2px solid gold;
+      }
+      .top > .inner {
+        z-index: 999;
+      }
+      .bottom > .inner {
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <!-- without relative position -->
+      <div>
+        <h4>WITHOUT RELATIVE POSITION</h4>
+        <div class="wrapper">
+          <div class="box z-index-3">Z-Index: 3</div>
+          <div class="box z-index-1">Z-Index: 1</div>
+          <div class="box z-index-2">Z-Index: 2</div>
+        </div>
+      </div>
+      <!--  with relative  -->
+      <div>
+        <h4>WITH RELATIVE POSITION</h4>
+        <div class="wrapper relative-position">
+          <div class="box z-index-3">Z-Index: 3</div>
+          <div class="box z-index-1">Z-Index: 1</div>
+          <div class="box z-index-2">Z-Index: 2</div>
+        </div>
+      </div>
+      <!-- negative z-index -->
+      <div class="negative-z-index">
+        <div class="child">I am behind my parent</div>
+      </div>
+      <div class="negative-z-index relative">
+        <div class="child">I am behind my parent</div>
+      </div>
+      <!--  stacking context  -->
+      <div>
+        <div class="top">
+          <code>z-index: 1;</code>
+          <div class="inner">
+            <code>z-index: 999;</code>
+          </div>
+        </div>
+        <div class="bottom">
+          <code>z-index: 2;</code>
+          <div class="inner">
+            <code>z-index: 2;</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

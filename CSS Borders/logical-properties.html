@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Borders Logical Properties</title>
+    <style>
+      .box {
+        height: 14rem;
+        width: 14rem;
+        border-width: 1rem;
+        border-color: yellow;
+      }
+      .logical-properties {
+        border-style: groove;
+        /*   border-inline: 2px solid brown; */
+        border-inline-start-color: green;
+        border-inline-end-color: red;
+        border-block-start-color: magenta;
+        border-block-end-color: lightblue;
+        direction: rtl;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- border logical properties -->
+    <div class="box logical-properties"></div>
+  </body>
+</html>

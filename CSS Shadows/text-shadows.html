@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows Text Shadows</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .wrapper:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      .text {
+        color: #272eb5;
+        font-size: 48px;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        text-shadow: 3px 3px 3px hotpink;
+        margin: 0;
+      }
+      .text-transparent-shadows {
+        color: rgb(0 0 0 / 20%);
+      }
+      .text-multiple-shadows {
+        text-shadow: 1px 1px 0px white, 2px 2px 0px firebrick;
+        color: darkslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- text shadows -->
+    <div class="wrapper">
+      <p class="text text-shadows">Hello, MySkill!</p>
+      <p class="text text-transparent-shadows">
+        This text is transparent yet you can see the shadow
+      </p>
+      <p class="text text-multiple-shadows">Multiple shadows are cool</p>
+    </div>
+  </body>
+</html>

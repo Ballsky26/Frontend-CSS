@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Focus</title>
+    <style>
+      .wrapper:not(:first-child) {
+        margin-top: 3rem;
+      }
+      input[type="text"] {
+        width: 250px;
+      }
+
+      .styling-focus {
+        display: block;
+      }
+      .styling-focus:focus {
+        outline: 2px solid red;
+        outline-offset: 1rem;
+      }
+
+      .focus-within .helper {
+        display: none;
+      }
+      .focus-within:focus-within .helper {
+        display: block;
+      }
+
+      .focus-visible button:focus {
+        outline: none;
+      }
+      .focus-visible button:focus-visible {
+        outline: 2px dashed blue;
+        outline-offset: 4px;
+      }
+      .helper {
+        display: none;
+      }
+      :focus-within .helper {
+        display: none;
+      }
+      .button:focus {
+        outline: 2px dashed blue;
+        outline-offset: 2px;
+        background-color: black;
+      }
+      .helper {
+        font-weight: bold;
+        padding: 0.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- focus on element -->
+    <div class="wrapper">
+      <input type="text" placeholder="please press tab button to focus" />
+      <a href="">second focus after press tab again</a>
+      <div>not focusable elements</div>
+      <div tabindex="0">i am focusable now!</div>
+    </div>
+
+    <!-- styling focus -->
+    <div class="wrapper">
+      <a href="" class="styling-focus">Styling the focus</a>
+    </div>
+
+    <!-- focus within -->
+    <div class="wrapper focus-within">
+      <button class="button">Use your tab key to focus this button</button>
+      <div class="helper">Hello!</div>
+    </div>
+
+    <!-- focus visible -->
+    <div class="wrapper focus-within">
+      <button class="button">I am a button</button>
+    </div>
+
+    <div class="wrapper">
+      <button class="button">Use your tab key to focus this button</button>
+      <div class="helper">Click this button for a surprise</div>
+    </div>
+
+    <div class="wrappe2">
+      <button class="button">Ini adalah contoh focus within</button>
+      <div class="helper">Helper focus within</div>
+    </div>
+
+    <script>
+      document
+        .querySelector("butto")
+        .addEventListener("click", () => alert("Suprise!"));
+    </script>
+  </body>
+</html>

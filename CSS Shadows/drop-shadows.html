@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows Drop Shadows</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .wrapper:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      figure {
+        max-width: 25rem;
+        margin: 2em auto;
+        padding: 1em;
+        background: #718093;
+        border-radius: 0.5em;
+      }
+      figure img {
+        filter: drop-shadow(0px 0px 30px rgba(0 255 255 / 50%));
+        filter: drop-shadow(0px 0px 10px hotpink)
+          drop-shadow(10px 10px 20px rgba(0 0 0 / 30%));
+      }
+    </style>
+  </head>
+  <body>
+    <!-- drop shadows -->
+    <div class="wrapper">
+      <figure>
+        <img
+          src="https://assets.codepen.io/174183/isolated-tshirt.png?width=320&format=auto&quality=60"
+          alt="A white t-shirt, isolated, on a hanger"
+        />
+        <figcaption>A cool, white t-shirt</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Function Mathematic Expression</title>
+    <style>
+      .wrapper :is(h1, h3) {
+        color: red;
+      }
+      .wrapper :is(h2, h4) {
+        color: green;
+      }
+      .wrapper h1:not(.top) {
+        font-size: 10rem;
+      }
+      :root {
+        --base-color: cyan;
+      }
+      .custom-properties {
+        font-size: 2rem;
+        padding: 14px;
+        /* background-color: var(--base-color, red); */
+        background-color: hsl(0, 100%, 50%);
+      }
+      a.function-return-value::after {
+        content: attr(class);
+      }
+      .calc-example {
+        height: 150px;
+        width: 40rem;
+        margin-top: 2rem;
+        border: 3px solid red;
+      }
+      .calc-example-section {
+        width: min(100%, 50px);
+        padding: 10px;
+        background-color: blueviolet;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="top">Title h1</h1>
+      <h1 class="bottom">Title h1</h1>
+      <!-- <h2>Title h2</h2>
+      <h3>Title h3</h3>
+      <h4>Title h4</h4> -->
+    </div>
+    <p class="custom-properties" data-bg="red">Ini contoh custom Properties</p>
+    <a
+      class="function-return-value"
+      data-custom="halo, aku world"
+      href="/to-link"
+    ></a>
+    <div class="calc-example">
+      <section class="calc-example-section">Ini Adalah Section</section>
+    </div>
+  </body>
+</html>

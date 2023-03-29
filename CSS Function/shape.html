@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape</title>
+    <style>
+      /* .circle {
+        /* width: 50rem;
+        height: 50rem; */
+      /* background-color: red; */
+      /* background: linear-gradient(to bottom right, #f52, #05f); */
+      /* clip-path: circle(6rem at right center); */
+      /* clip-path: circle(closest-side at 6rem 1rem); */
+      /* clip-path: ellipse(4rem 120px at right center); */
+      /* clip-path: polygon(
+          0% 10%,
+          60% 20%,
+          60% 0%,
+          100% 50%,
+          60% 100%,
+          60% 80%,
+          0% 80%
+        ); 
+      } */
+      .offset-path-demo {
+        width: 12rem;
+        height: 12rem;
+        background: salmon;
+        clip-path: circle(40%);
+        offset-path: path("M 0 0 L 140 70 L-60 30 Z");
+        margin: 24rem;
+        animation: moving 1s infinite linear;
+      }
+
+      @keyframes moving {
+        0% {
+          offset-distance: 0%;
+        }
+        100% {
+          offset-distance: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="circle"></div> -->
+    <div class="offset-path-demo"></div>
+  </body>
+</html>

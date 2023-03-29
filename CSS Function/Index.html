@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Function</title>
+    <style>
+      :root {
+        --primary-color: wheat;
+      }
+      .wrapper {
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+        max-width: 500px;
+      }
+      .basic-functions {
+        height: 15rem;
+        width: min(15rem, 1050px);
+        background: rgb(123, 111, 366);
+        border: 1px solid blue;
+      }
+      .functional-selectors :is(h1, h2) {
+        color: var(--primary-color);
+      }
+      .functional-selectors :is(h3) {
+        color: var(--secondary-color, hotpink);
+      }
+
+      .background-image {
+        height: 15rem;
+        width: calc(100vw - 120px);
+        background-image: url("https://www.w3schools.com/w3css/img_lights.jpg");
+        background-size: cover;
+        border: 1px solid blue;
+        clip-path: circle(50%);
+      }
+      .math-functions {
+        font-size: clamp(2rem, 1rem + 3vw, 3rem);
+      }
+      .transform {
+        height: min(15rem, 1949px);
+        width: 15rem;
+        background-color: red;
+        transform: scale(1.1) rotate(45deg) skew(45deg);
+        margin-left: 10rem;
+      }
+
+      .scene {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        margin: 80px;
+        perspective: 400px;
+      }
+      .cube {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: translateZ(-100px);
+      }
+      .cube__face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        line-height: 200px;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }
+
+      .cube__face--front {
+        background: hsla(0, 100%, 50%, 0.7);
+      }
+      .cube__face--right {
+        background: hsla(60, 100%, 50%, 0.7);
+      }
+      .cube__face--back {
+        background: hsla(120, 100%, 50%, 0.7);
+      }
+      .cube__face--left {
+        background: hsla(180, 100%, 50%, 0.7);
+      }
+      .cube__face--top {
+        background: hsla(240, 100%, 50%, 0.7);
+      }
+      .cube__face--bottom {
+        background: hsla(300, 100%, 50%, 0.7);
+      }
+
+      .cube__face--front {
+        transform: rotateY(0deg) translateZ(100px);
+      }
+      .cube__face--right {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .cube__face--back {
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      .cube__face--left {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .cube__face--top {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .cube__face--bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- basic functions -->
+      <div class="basic-functions"></div>
+      <!-- functional selectors -->
+      <div class="functional-selectors">
+        <h1>This is the title</h1>
+        <h2>This is the title</h2>
+        <h3>This is the title</h3>
+      </div>
+      <!-- background image -->
+      <div class="background-image"></div>
+      <!-- math functions -->
+      <p class="math-functions">TESTING MATH FUNCTION</p>
+      <!-- transform example -->
+      <div class="transform"></div>
+      <!-- perspective -->
+      <div class="scene">
+        <div class="cube">
+          <div class="cube__face cube__face--front">front</div>
+          <div class="cube__face cube__face--back">back</div>
+          <div class="cube__face cube__face--right">right</div>
+          <div class="cube__face cube__face--left">left</div>
+          <div class="cube__face cube__face--top">top</div>
+          <div class="cube__face cube__face--bottom">bottom</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

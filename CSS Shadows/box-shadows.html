@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows Box Shadows</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .wrapper:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      .box {
+        height: 10rem;
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-shadows {
+        box-shadow: 5px 5px 20px 5px #f90000;
+      }
+      .box-shadows-inset {
+        box-shadow: inset 5px 5px 20px 5px #000;
+      }
+      .multiple-shadows {
+        box-shadow: 5px 5px 20px 5px darkslateblue,
+          -5px -5px 20px 5px dodgerblue, inset 0px 0px 10px 2px hotpink,
+          inset 0px 0px 20px 10px steelblue;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- box shadows -->
+    <div class="wrapper">
+      <div class="box box-shadows">box shadow</div>
+      <div class="box box-shadows-inset">inset</div>
+      <div class="box multiple-shadows">multiple shadows</div>
+    </div>
+  </body>
+</html>

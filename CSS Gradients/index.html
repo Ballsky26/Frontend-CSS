@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradients</title>
+    <style>
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        gap: 50px;
+      }
+      .box {
+        height: 15rem;
+        width: 15rem;
+      }
+      .linear-gradient {
+        /*   background: linear-gradient(to right, red, maroon); */
+        /*   background: linear-gradient(45deg, aqua, maroon 80%); */
+        background: linear-gradient(
+          45deg,
+          darkred 20%,
+          crimson,
+          darkorange 60%,
+          gold,
+          bisque
+        );
+      }
+      .radial-gradient {
+        border-radius: 50%;
+        /*   background: radial-gradient(darkred 20%, crimson, darkorange 60%, gold, bisque); */
+        background: radial-gradient(
+          closest-side,
+          darkorange 60%,
+          gold,
+          bisque,
+          darkred 20%,
+          crimson
+        );
+      }
+      .conic-gradient {
+        background: conic-gradient(
+          gold 20deg,
+          lightcoral 20deg 190deg,
+          mediumturquoise 190deg 220deg,
+          plum 220deg 320deg,
+          steelblue 320deg
+        );
+        border-radius: 50%;
+        border: 10px solid;
+      }
+      .repeating-linear {
+        background: repeating-linear-gradient(
+          45deg,
+          red,
+          red 30px,
+          white 30px,
+          white 60px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box linear-gradient"></div>
+      <div class="box radial-gradient"></div>
+      <div class="box conic-gradient"></div>
+      <div class="box repeating-linear"></div>
+    </div>
+  </body>
+</html>

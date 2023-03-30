@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Overflow</title>
+    <style>
+      :root {
+        --color-primary-dark: darkblue;
+      }
+
+      .text-overflow {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      h1 {
+        color: var(--color-primary-dark);
+      }
+
+      h2 {
+        color: salmon;
+      }
+
+      .parent {
+        width: 70vw;
+        height: 50vh;
+        border: 5px solid var(--color-primary-dark);
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border: 5px solid salmon;
+        aspect-ratio: 3/1;
+      }
+
+      .auto-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 30vw 30vw 30vw);
+        gap: 1rem;
+        padding: 0;
+      }
+
+      main {
+        width: 100%;
+        text-align: center;
+        text-align: -webkit-center;
+      }
+      .parent {
+        overflow-x: scroll;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text-overflow">This text is actually overflow</p>
+
+    <main>
+      <h1>parent</h1>
+      <div class="parent">
+        <div class="auto-grid">
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+          <div class="box">
+            <h2>child</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

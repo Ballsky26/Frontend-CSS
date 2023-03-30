@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transition</title>
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        background-color: violet;
+        transition-duration: 600ms;
+        transition-timing-function: ease;
+        padding: 8px;
+      }
+      .square.tp-transform {
+        transition-property: transform;
+      }
+      .square.tp-color {
+        transition-property: background-color;
+      }
+      .square.tp-both {
+        transition-property: background-color, transform;
+      }
+      .square.tp-none {
+        transition-property: none;
+      }
+      .square:is(:hover, :focus) {
+        transform: scale(1.3);
+        background-color: cornflowerblue;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 32px;
+        margin-top: 1rem;
+      }
+      .wrapper .square:nth-child(odd) {
+        justify-self: end;
+      }
+      .wrapper .square:nth-child(even) {
+        justify-self: start;
+      }
+      body {
+        display: grid;
+        place-items: center;
+      }
+
+      .timing .square {
+        width: 150px;
+        max-height: 100px;
+        background-color: lightcoral;
+        border-radius: 8px;
+        text-align: center;
+        padding: 8px;
+        margin-bottom: 4px;
+        transition-property: width;
+        transition-duration: 1s;
+      }
+      .timing .square.ttf-linear {
+        transition-timing-function: linear;
+      }
+      .timing .square.ttf-ease {
+        transition-timing-function: ease;
+      }
+      .timing .square.ttf-ease-in {
+        transition-timing-function: ease-in;
+      }
+      .timing .square.ttf-ease-out {
+        transition-timing-function: ease-out;
+      }
+      .timing .square.ttf-ease-in-out {
+        transition-timing-function: ease-in-out;
+      }
+      .timing .square.ttf-steps {
+        transition-timing-function: steps(3);
+      }
+      .timing .square.ttf-cubic {
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .timing .square:is(:hover, :focus) {
+        width: 50%;
+      }
+
+      .transition.square {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        margin-top: 4px;
+        background: cornflowerblue;
+        opacity: 0.5;
+        transform: scale(1) rotate(0);
+      }
+      .square.has-transition {
+        transition: transform 750ms ease-in-out 0s;
+      }
+      .transition.square:is(:hover, :focus) {
+        transform: scale(1.5) rotate(135deg);
+        background-color: violet;
+      }
+      .emoji {
+        font-size: 8em;
+        filter: grayscale(100%);
+        transition: filter 450ms ease;
+      }
+      .emoji:is(:hover, :focus) {
+        filter: grayscale(0) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="square tp-none" tabindex="0">none</div>
+      <div class="square tp-transform" tabindex="0">transform</div>
+      <div class="square tp-color" tabindex="0">color</div>
+      <div class="square tp-both" tabindex="0">both</div>
+    </div>
+
+    <div class="wrapper timing">
+      <div class="square ttf-linear" tabindex="0">linear</div>
+      <div class="square ttf-ease" tabindex="0">ease</div>
+      <div class="square ttf-ease-in" tabindex="0">ease-in</div>
+      <div class="square ttf-ease-out" tabindex="0">ease-out</div>
+      <div class="square ttf-ease-in-out" tabindex="0">ease-in-out</div>
+      <div class="square ttf-steps" tabindex="0">steps</div>
+      <div class="square ttf-cubic" tabindex="0">cubic</div>
+    </div>
+
+    <div class="transition square has-transition" tabindex="0"></div>
+
+    <div class="wrapper">
+      <div class="emoji" tabindex="0">😂</div>
+      <div class="emoji" tabindex="0">😍</div>
+      <div class="emoji" tabindex="0">😊</div>
+      <div class="emoji" tabindex="0">😒</div>
+    </div>
+  </body>
+</html>

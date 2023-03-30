@@ -14,6 +14,37 @@
         white-space: nowrap;
         border: 2px solid blue;
       }
+      .parent {
+        width: 70vw;
+        height: 50vh;
+        border: 5px solid var(--color-primary-dark);
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        border: 5px solid salmon;
+        aspect-ratio: 3/1;
+      }
+
+      .auto-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 30vw 30vw 30vw);
+        gap: 1rem;
+        padding: 0;
+      }
+
+      main {
+        width: 100%;
+        text-align: center;
+        text-align: -webkit-center;
+      }
+      .parent {
+        overflow-x: scroll;
+        overflow-y: scroll;
+      }
     </style>
   </head>
   <body>
@@ -27,5 +58,39 @@
         labore laboriosam eaque placeat eius unde dolores fugit. Sapiente!
       </p>
     </div>
+
+    <!-- OVERFLOW Y DAN X -->
+    <!-- <h1>parent</h1>
+    <div class="parent">
+      <div class="auto-grid">
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+        <div class="box">
+          <h2>child</h2>
+        </div>
+      </div>
+    </div> -->
   </body>
 </html>

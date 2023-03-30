@@ -13,8 +13,14 @@
         border-radius: 50%;
         margin: 5rem;
         position: relative;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(10, end);
+        animation-delay: 1s;
+        animation-direction: reverse;
       }
-      .pulser::after {
+      /* .pulser::after {
         content: "";
         position: absolute;
         height: 100%;
@@ -23,15 +29,28 @@
         background: purple;
         top: 0;
         left: 0;
-        animation: pulse 1s infinite;
+        /* animation: pulse 1s infinite; */
+      /* animation-name: pulse; */
+      /* animation-name: move;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(10, end); 
       }
-      @keyframes pulse {
+      /* @keyframes pulse {
         0% {
           opacity: 0;
         }
         50% {
           transform: scale(1.5);
           opacity: 0.4;
+        }
+      } */
+      @keyframes move {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(300px);
         }
       }
     </style>

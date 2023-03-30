@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Lists</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 50px;
+      }
+      .list-container ul.inside {
+        list-style-position: inside;
+      }
+      .list-container li {
+        background-color: plum;
+      }
+      .list-container li::marker {
+        background-color: plum;
+      }
+      .list-style-image {
+        list-style-image: url("https://i.imgur.com/jMyOape.gif");
+      }
+      .list-style-type ul {
+        list-style-type: "🛒";
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>oat milk</li>
+      <li>rhubarb</li>
+      <li>cereal</li>
+      <li>pie crust</li>
+    </ol>
+    <ul>
+      <li>oat milk</li>
+      <li>rhubarb</li>
+      <li>cereal</li>
+      <li>pie crust</li>
+    </ul>
+    <dl>
+      <dt>oat milk</dt>
+      <dd>- non dairy trendy drink adalah</dd>
+      <dt>cereal</dt>
+      <dd>- breakfast food adalah</dd>
+    </dl>
+
+    <div class="wrapper">
+      <div class="list-container">
+        <h1>outside</h1>
+        <ul>
+          <li>oat milk</li>
+          <li>rhubarb</li>
+          <li>cereal</li>
+          <li>pie crust</li>
+        </ul>
+      </div>
+
+      <div class="list-container">
+        <h1>inside</h1>
+        <ul class="inside">
+          <li>oat milk</li>
+          <li>rhubarb</li>
+          <li>cereal</li>
+          <li>pie crust</li>
+        </ul>
+      </div>
+
+      <div class="list-container list-style-image">
+        <h1>list style image</h1>
+        <ul>
+          <li>oat milk</li>
+          <li>rhubarb</li>
+          <li>cereal</li>
+          <li>pie crust</li>
+        </ul>
+      </div>
+
+      <div class="list-container list-style-type">
+        <h1>list style type</h1>
+        <ul>
+          <li>oat milk</li>
+          <li>rhubarb</li>
+          <li>cereal</li>
+          <li>pie crust</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

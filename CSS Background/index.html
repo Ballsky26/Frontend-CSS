@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Background</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        max-width: 600px;
+      }
+      .wrapper > * {
+        height: 15rem;
+        width: 15rem;
+      }
+      .demo-background-color {
+        background-color: hotpink;
+      }
+      .demo-background-image {
+        background-image: url("https://images.unsplash.com/photo-1536707076730-0615b7f5b49a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=690&q=80");
+        background-image: linear-gradient(rebeccapurple, teal);
+        /* background-image: conic-gradient(rebeccapurple, teal, green, blue, purple); */
+      }
+      .demo-repeating-background-image {
+        background-image: url("https://images.unsplash.com/photo-1536707076730-0615b7f5b49a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=690&q=80");
+        background-size: 50px;
+        background-repeat: round;
+      }
+
+      .demo-background-position {
+        background-image: url("https://images.unsplash.com/photo-1536707076730-0615b7f5b49a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=690&q=80");
+        background-size: 50px;
+        background-position: center left;
+        background-repeat: no-repeat;
+      }
+
+      .demo-background-text {
+        border: 0.5px solid hsla(0deg, 0%, 60%, 0.5);
+        padding: 1rem;
+
+        font-family: "Google Sans", "Google Sans Text", Roboto, sans-serif;
+        font-size: 10rem;
+        font-weight: bold;
+        text-align: center;
+
+        background-image: url("https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?auto=format&fit=crop&w=690&q=80");
+        background-size: contain;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        width: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="demo-background-color"></div>
+      <div class="demo-background-image"></div>
+      <div class="demo-repeating-background-image"></div>
+      <div class="demo-background-position"></div>
+      <div class="demo-background-text">CSS</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repeat Gradient</title>
+    <style>
+      .linear-gradient-example {
+        height: 10rem;
+        width: 10rem;
+        /* background: conic-gradient(from 10deg at 30% 30%, white, black); */
+        background: conic-gradient(
+          green 20deg,
+          lightcoral 20deg 190deg,
+          mediumturquoise 190deg 220deg,
+          plum 220deg 320deg,
+          steelblue 320deg
+        );
+        border-radius: 50%;
+        border: 10px solid;
+      }
+      .multi-linear-gradient-example {
+        height: 10rem;
+        width: 10rem;
+        background: repeating-linear-gradient(
+          45deg,
+          red,
+          red 30px,
+          white 30px,
+          white 60px
+        );
+      }
+      .multi-radial-gradient-example {
+        height: 10rem;
+        width: 10rem;
+        background: repeating-radial-gradient(
+          circle at left,
+          red,
+          red 8px,
+          blue 12px,
+          blue 20px
+        );
+      }
+      .multi-conic-gradient-example {
+        height: 10rem;
+        width: 10rem;
+        background: repeating-conic-gradient(#fff 0 45deg, #000 45deg 90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="linear-gradient-example"></div>
+    <div class="multi-linear-gradient-example"></div>
+    <div class="multi-radial-gradient-example"></div>
+    <div class="multi-conic-gradient-example"></div>
+  </body>
+</html>

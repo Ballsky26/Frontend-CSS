@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Blend Modes</title>
+    <style>
+      /* BACKGROUND BLEND MODE */
+      .background-blend-mode {
+        max-width: 400px;
+        height: 400px;
+        position: relative;
+        background: url(https://source.unsplash.com/YJOuS1GZbDQ/600x400),
+          url(https://source.unsplash.com/V7oLFRVqeHM/600x400),
+          url(https://source.unsplash.com/_wWjQr1JZ1k/600X400);
+        background-size: cover;
+        background-blend-mode: overlay;
+        /* 	background-blend-mode: normal; */
+      }
+
+      /* MIX BLEND MODE */
+      .mix-blend-mode {
+        position: relative;
+        margin: 0 auto;
+      }
+      .mix-blend-mode::before,
+      .mix-blend-mode::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .mix-blend-mode img {
+        filter: grayscale() brightness(110%);
+      }
+      .mix-blend-mode::after {
+        background: hotpink;
+        mix-blend-mode: multiply;
+      }
+      .mix-blend-mode::before {
+        background: navy;
+        mix-blend-mode: lighten;
+      }
+
+      /* SEPARABLE BLEND MODES DEMO */
+      .separable-blend-mode {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1.5rem;
+        max-width: 550px;
+        margin: 2em auto;
+        padding: 1em;
+        background: lightslategray;
+      }
+      .separable-blend-mode p {
+        margin-top: 0.5rem;
+      }
+      .separable-blend-mode img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+      }
+      .my-element {
+        /*   mix-blend-mode: multiply; */
+        mix-blend-mode: darken;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Background Blend Mode Demo</h2>
+    <div class="background-blend-mode"></div>
+
+    <br />
+
+    <h2>Mix Blend Mode Demo</h2>
+    <div class="mix-blend-mode">
+      <img
+        src="http://source.unsplash.com/HvZDCuRnSaY/800x600"
+        alt="A group of friends, sat on stairs, smiling"
+      />
+    </div>
+
+    <br />
+
+    <h2>Separable Blend Modes Demo</h2>
+    <div class="separable-blend-mode">
+      <div>
+        <img
+          src="https://source.unsplash.com/dPklt2rBgDw/500X300"
+          alt="Diagonal checkboard tiles"
+        />
+        <p>No blend mode</p>
+      </div>
+      <div>
+        <img
+          src="https://source.unsplash.com/dPklt2rBgDw/500X300"
+          alt="Diagonal checkboard tiles"
+          class="my-element"
+        />
+        <p><code>mix-blend-mode: multiply;</code></p>
+      </div>
+    </div>
+  </body>
+</html>

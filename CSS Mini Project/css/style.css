@@ -1,0 +1,159 @@
+body {
+    background-color: wheat;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+}
+
+header {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1)0%, rgba(253, 29, 29, 1)50%, rgba(252, 176, 69, 1)100%);
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+}
+
+.img-profile {
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px 2px rgb(84, 43, 111, 0.485);
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.img-profile:hover {
+    margin-left: -10px;
+}
+
+.holder-img-profile {
+    flex: 1;
+}
+
+.holder-detail-profile {
+    flex: 2;
+}
+
+.name-profile {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.title-profile {
+    color: white;
+}
+
+.button {
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 10px 0 0;
+    font-family: "Roboto Slab", serif;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.button.download {
+    background-color: #e6e6e6;
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+
+.button.contact {
+    background-color: #37bc9b;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.barContainer {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(235, 233, 233);
+    position: relative;
+}
+
+.barFilling {
+    position: absolute;
+
+    height: 20px;
+    border-radius: 20px;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.green {
+    background-color: rgb(30, 195, 181);
+    width: 80%;
+}
+
+.orange {
+    background-color: rgb(245, 173, 113);
+    width: 75%;
+}
+
+.purple {
+    background-color: rgb(245, 113, 225);
+    width: 65%;
+}
+
+.subContent {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.skillBar {
+    display: block;
+    margin: 10px 0;
+}
+
+ul.workEx li {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+ul.workEx li:first-child {
+    padding-top: 0;
+}
+
+span strong {
+    color: #1eb574;
+}
+
+.subWorkEx {
+    font-size: 16px;
+    color: rgb(66, 66, 66);
+    font-weight: 400;
+}
+
+footer {
+    background-color: rgb(76, 75, 75);
+    text-align: center;
+}
+
+.footerHolder {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.footerName {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}

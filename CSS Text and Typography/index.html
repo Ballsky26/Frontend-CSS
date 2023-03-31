@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text and Typography</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        max-width: 600px;
+      }
+      /* Import "EB Garamond" from Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+      .ff-serif {
+        font-family: serif;
+      }
+      .ff-sans-serif {
+        font-family: sans-serif;
+      }
+      .ff-monospace {
+        font-family: monospace;
+      }
+      .ff-fallback-demo {
+        font-family: "Nonexistent-Font", monospace;
+      }
+      .ff-cursive {
+        font-family: cursive;
+      }
+      .ff-garamond {
+        font-family: "EB Garamond";
+      }
+      .label {
+        font-size: 0.4em;
+      }
+      h1:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      .normal {
+        /* This is the default value. */
+        font-style: normal;
+      }
+      .italic {
+        font-style: italic;
+      }
+      .oblique {
+        font-style: oblique;
+        font-family: "EB Garamond Regular", serif;
+      }
+
+      p.p {
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 1.5;
+        letter-spacing: 12px;
+        text-transform: capitalize;
+        text-decoration-line: underline;
+        text-decoration-color: coral;
+        text-decoration-style: double;
+        text-decoration-thickness: 10px;
+        text-indent: 10px;
+      }
+
+      .text-indent {
+        font-size: 24px;
+        text-indent: 3em;
+        /*   white-space: nowrap; */
+        text-align: center;
+        direction: ltr;
+      }
+      .text-indent::first-letter {
+        font-size: 48px;
+      }
+      .text-indent::first-line {
+        font-weight: bold;
+      }
+      .text-indent::selection {
+        background: transparent;
+        text-shadow: 0 1px 2px #0f07, 0 0 10px #0fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--  Font Family  -->
+      <div class="container">
+        <h1 class="ff-serif">serif</h1>
+        <h1 class="ff-sans-serif">sans-serif</h1>
+        <h1 class="ff-monospace">monospace</h1>
+        <h1 class="ff-fallback-demo">
+          monospace <span class="label">(via fallback)</span>
+        </h1>
+        <h1 class="ff-cursive">cursive</h1>
+        <h1 class="ff-garamond">EB Garamond</h1>
+      </div>
+      <!-- Font style -->
+      <div class="container">
+        <h1 class="normal">font-style: normal</h1>
+        <h1 class="italic">font-style: italic</h1>
+        <h1 class="oblique">font-style: oblique</h1>
+      </div>
+      <!--  Font properties  -->
+      <div class="container">
+        <p class="p">Lorem ipsum dolor sit amet</p>
+      </div>
+      <!--  Paragraphs  -->
+      <div class="container">
+        <p class="text-indent">
+          The Salinas Valley is in Northern California. It is a long narrow
+          swale between two ranges of mountains, and the Salinas River winds and
+          twists up the center until it falls at last into Monterey Bay.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
